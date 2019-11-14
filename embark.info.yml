@@ -1,0 +1,8 @@
+name: Embark
+description: A starter kit theme for Drupal 8 and Webpack encore.
+core: 8.x
+type: theme
+base theme: stable
+libraries:
+  - embark/global-styling
+

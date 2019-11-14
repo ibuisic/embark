@@ -1,0 +1,12 @@
+{
+  "name": "embark",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ibuisic/embark.git",
+  "author": "Ivan Buisic <buisic.ivan@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.28.0",
+    "webpack-notifier": "^1.8.0"
+  }
+}
