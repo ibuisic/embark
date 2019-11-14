@@ -1,7 +1,7 @@
 global-styling:
-  # css:
-  #   base:
-  #     build/app.css: {}
+  css:
+    base:
+      build/app.css: {}
   js:
     build/runtime.js: {}
     build/app.js: {}
