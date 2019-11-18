@@ -1,12 +1,12 @@
 {
   "entrypoints": {
-    "app": {
+    "global": {
       "js": [
         "/build/runtime.js",
-        "/build/app.js"
+        "/build/global.js"
       ],
       "css": [
-        "/build/app.css"
+        "/build/global.css"
       ]
     }
   }
