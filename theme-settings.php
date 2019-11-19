@@ -158,7 +158,6 @@ function embark_form_system_theme_settings_alter(&$form, FormStateInterface $for
   );
 
   // Images
-
   $form['images_and_tables'] = array(
     '#type' => 'details',
     '#title' => t('Images & Tables'),
@@ -197,7 +196,7 @@ function embark_form_system_theme_settings_alter(&$form, FormStateInterface $for
     '#type' => 'details',
     '#title' => t('Regions'),
     '#group' => 'embark',
-    '#description' => t('Additional classes and container settings for each region')
+    '#description' => t('Additional classes for each region')
   );
 
   // Regions
