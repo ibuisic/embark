@@ -42,7 +42,7 @@
           {% set title %}
             <i class="{{ icon[1] }}"></i>{{ icon[0] }}
           {% endset %}
-          {{ link(item.title, item.url) }}
+          {{ link(title, item.url) }}
         {% else %}
           {{ link(item.title, item.url) }}
         {% endif %}

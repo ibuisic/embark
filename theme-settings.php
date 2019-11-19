@@ -172,13 +172,10 @@ function embark_form_system_theme_settings_alter(&$form, FormStateInterface $for
     '#open' => true,
   );
 
-  $form['images_and_tables']['images']['responsive_images'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Responsive images'),
-    '#description' => t('Images in Bootstrap are made responsive with <code>.img-fluid</code> class so that they scale with the parent element.<br> For more informations go to @img-responsive.', array(
-      '@img-responsive' => Drupal::l('Responsive images', Url::fromUri('https://getbootstrap.com/docs/4.2/content/images/#responsive-images/', ['absolute' => true, 'attributes' => array('target' => '_blank')])),
-    )),
-    '#default_value' => theme_get_setting('responsive_images')
+  $form['images_and_tables']['images']['image_classes'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Image classes'),
+    '#default_value' => theme_get_setting('image_classes')
   );
 
 
@@ -189,15 +186,10 @@ function embark_form_system_theme_settings_alter(&$form, FormStateInterface $for
     '#collapsible' => true,
   );
 
-  $form['images_and_tables']['tables']['tables_background'] = array(
-    '#type' => 'select',
-    '#title' => t('Tables background'),
-    '#default_value' => theme_get_setting('tables_background'),
-    '#empty_option' => t('None'),
-    '#options' => [
-      'table-light' => 'Light',
-      'table-dark' => 'Dark'
-    ],
+  $form['images_and_tables']['tables']['table_classes'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Table classes'),
+    '#default_value' => theme_get_setting('table_classes')
   );
 
   // Layout
