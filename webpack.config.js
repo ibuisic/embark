@@ -1,4 +1,5 @@
 const Encore = require('@symfony/webpack-encore');
+const webpackEntry2LibPlugin = require('webpack-entry2lib-plugin');
 
 Encore
     // directory where compiled assets will be stored
@@ -60,6 +61,9 @@ Encore
 
     // uncomment if you're having problems with a jQuery plugin
     .autoProvidejQuery()
+
+    // Copy entrypoints to Drupal library
+    .addPlugin(new webpackEntry2LibPlugin())
 ;
 
 module.exports = Encore.getWebpackConfig();
