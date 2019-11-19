@@ -17,7 +17,7 @@
   {% if site_logo %}
     <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
       {% if theme_settings.inline_logo %}
-        {{ source(site_logo) }}
+        {{ source(site_logo, ignore_missing = true) }}
       {% else %}
         <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
       {% endif %}
