@@ -29,9 +29,9 @@ class UtilityClasses {
     if (theme_get_setting($theme_setting)  !== '') {
       $classes = preg_replace("/[^a-z0-9_\s-]/", "", strtolower(theme_get_setting($theme_setting)));
       $variables[$theme_setting] = $classes;
-    }
-    if ($config['addToAttributes']) {
-      $variables['attributes']['class'][] = $classes;
+      if ($config['addToAttributes']) {
+        $variables['attributes']['class'][] = $classes;
+      }
     }
 
     return $variables;
