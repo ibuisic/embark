@@ -18,10 +18,21 @@ class UtilityClasses {
    * @return variables
    *
    */
-  public static function makeClasses($theme_setting, &$variables) {
+  public static function makeClasses($theme_setting, &$variables, $options = array()) {
+
+    $defaults = array(
+      'addToAttributes' => false,
+    );
+
+    $config = array_merge($defaults, $options);
+
     if (theme_get_setting($theme_setting)  !== '') {
       $variables[$theme_setting] = preg_replace("/[^a-z0-9_\s-]/", "", strtolower(theme_get_setting($theme_setting)));
     }
+    if ($config['addToAttributes']) {
+      $variables['attributes']['class'][] = $variables[$theme_setting];
+    }
+
     return $variables;
   }
 

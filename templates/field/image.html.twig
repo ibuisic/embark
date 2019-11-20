@@ -10,10 +10,5 @@
  * @see template_preprocess_image()
  */
 #}
-{%
-  set classes = [
-    image_classes ? image_classes,
-  ]
-%}
 
-<img{{ attributes.addClass(classes) }} />
+<img{{ attributes.addClass(image_classes) }} />
