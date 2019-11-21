@@ -49,6 +49,13 @@ function embark_preprocess_input(&$variables) {
 }
 
 /**
+ * Implements hook_preprocess_HOOK() for views-view-table.html.twig.
+ */
+function embark_preprocess_views_view_table(&$variables) {
+  UtilityClasses::makeClasses('table_classes', $variables);
+}
+
+/**
  * Implements hook_preprocess_block()
  */
 function embark_preprocess_block__system_branding_block(&$variables) {
