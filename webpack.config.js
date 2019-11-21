@@ -1,11 +1,12 @@
 const Encore = require('@symfony/webpack-encore');
 const webpackEntry2LibPlugin = require('webpack-entry2lib-plugin');
+const IconfontPlugin = require('iconfont-plugin-webpack');
 
 Encore
     // directory where compiled assets will be stored
     .setOutputPath('build/')
     // public path used by the web server to access the output path
-    .setPublicPath('/build')
+    .setPublicPath('/themes/custom/embark/build')
     // only needed for CDN's or sub-directory deploy
     //.setManifestKeyPrefix('build/')
 
@@ -64,6 +65,19 @@ Encore
 
     // Copy entrypoints to Drupal library
     .addPlugin(new webpackEntry2LibPlugin())
+
+    .addPlugin(new IconfontPlugin({
+      src: './assets/svg', // required - directory where your .svg files are located
+      family: 'glyphs', // optional - the `font-family` name. if multiple iconfonts are generated, the dir names will be used.
+      dest: {
+          font: './assets/font/[family].[type]', // required - paths of generated font files
+          css: './assets/css/core/_iconfont.scss' // required - paths of generated css files
+      },
+      watch: {
+          pattern: 'assets/svg/**/*.svg', // required - watch these files to reload
+          cwd: './' // optional - current working dir for watching
+      },
+  }))
 ;
 
 module.exports = Encore.getWebpackConfig();

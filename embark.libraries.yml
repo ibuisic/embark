@@ -1,7 +1,7 @@
 global:
-  css:
-    base:
-      build/global.css: {}
   js:
-    build/runtime.js: {}
-    build/global.js: {}
+    themes/custom/embark/build/runtime.js: {}
+    themes/custom/embark/build/global.js: {}
+  css:
+    theme:
+      themes/custom/embark/build/global.css: {}

@@ -15,7 +15,7 @@ use Drupal\embark\Theme\UtilityClasses;
 function embark_library_info_alter(&$libraries) {
   // Load custom CSS library
   $custom_css = theme_get_setting('embark_custom_css_on');
-  if ($custom_css) {
+  if ($custom_css === 1) {
     $libraries['global']['css']['theme']['/sites/default/files/embark-custom.css'] = [];
   }
 }

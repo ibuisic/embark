@@ -1,5 +1,9 @@
 {
-  "build/global.css": "/build/global.css",
-  "build/global.js": "/build/global.js",
-  "build/runtime.js": "/build/runtime.js"
+  "themes/custom/embark/build/global.css": "/themes/custom/embark/build/global.css",
+  "themes/custom/embark/build/global.js": "/themes/custom/embark/build/global.js",
+  "themes/custom/embark/build/runtime.js": "/themes/custom/embark/build/runtime.js",
+  "themes/custom/embark/build/fonts/glyphs.eot": "/themes/custom/embark/build/fonts/glyphs.291158e1.eot",
+  "themes/custom/embark/build/fonts/glyphs.woff": "/themes/custom/embark/build/fonts/glyphs.b430123f.woff",
+  "themes/custom/embark/build/fonts/glyphs.ttf": "/themes/custom/embark/build/fonts/glyphs.e51acc8e.ttf",
+  "themes/custom/embark/build/images/glyphs.svg": "/themes/custom/embark/build/images/glyphs.92d6c3a0.svg"
 }

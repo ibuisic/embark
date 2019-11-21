@@ -2,11 +2,11 @@
   "entrypoints": {
     "global": {
       "js": [
-        "/build/runtime.js",
-        "/build/global.js"
+        "/themes/custom/embark/build/runtime.js",
+        "/themes/custom/embark/build/global.js"
       ],
       "css": [
-        "/build/global.css"
+        "/themes/custom/embark/build/global.css"
       ]
     }
   }
