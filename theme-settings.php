@@ -126,9 +126,7 @@ function embark_form_system_theme_settings_alter(&$form, FormStateInterface $for
   $form['forms']['custom_forms'] = array(
     '#type' => 'details',
     '#title' => 'Custom forms',
-    '#description' => t('Check which form element type should use Bootstrap @custom-forms.', array(
-      '@custom-forms' => Drupal::l('custom forms', Url::fromUri('https://getbootstrap.com/docs/4.2/components/forms/#custom-forms/',  ['absolute' => true, 'attributes' => array('target' => '_blank')]))
-    )),
+    '#description' => t('Add custom CSS classes to selected form elements'),
     '#collapsible' => true,
     '#open' => true,
   );

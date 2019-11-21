@@ -39,14 +39,7 @@
  * @see template_preprocess_table()
  */
 #}
-{%
-  set classes = [
-    theme_settings.table_classes ? theme_settings.table_classes,
-  ]
-%}
-
-
-<table{{ attributes.addClass(classes)  }}>
+<table{{ attributes }}>
   {% if caption %}
     <caption>{{ caption }}</caption>
   {% endif %}
